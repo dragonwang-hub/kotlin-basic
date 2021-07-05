@@ -3,14 +3,14 @@ package kotlinDemo
 import java.util.*
 
 data class Alert(
-    val id: Int,
-    val dashboardId: Int,
-    val dashboardSlug: String,
-    val panelId: Int,
-    val name: String,
-    val state: String,
-    val newStateDate: Date,
-    val url: String
+    val id: Int = 0,
+    val infoId: Int = 0,
+    val infoSlug: String = "",
+    val alertId: Int = 0,
+    val name: String = "",
+    val state: String = "",
+    val newStateDate: Date = Date(),
+    val url: String = ""
 )
 
 fun main() {
@@ -33,4 +33,7 @@ fun main() {
 
     print(alert.equals(alertCopyTwo))
 //    alert.url="alert_url";
+
+    val alertNoArg = Alert()
+    println(alertNoArg)
 }
